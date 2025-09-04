@@ -1,0 +1,42 @@
+﻿Note: below is the conversion of minutes + hrs and sec into just a grand total of only minutes.
+      the second copy-paste is for individual fields of hrs, min, sec as separate columns.
+It turns out that date time is the correct type. date is a place holder, and time truly stores the duration
+---------------------------------------------------------------
+I see, you want to convert the entire duration into minutes for easier comparison. You can achieve this by creating a single calculated field in Tableau that converts the hours and seconds into minutes. Here’s how you can do it:
+
+// Create a calculated field named "TotalDurationMinutes"
+DATEPART('hour', [Duration]) * 60 + DATEPART('minute', [Duration]) + DATEPART('second', [Duration]) / 60
+
+In this code, DATEPART('hour', [Duration]) * 60 converts the hours into minutes, DATEPART('minute', [Duration]) is already in minutes, and DATEPART('second', [Duration]) / 60 converts the seconds into minutes. The results are then added together to get the total duration in minutes.
+
+This calculated field will allow you to perform calculations on the total duration in minutes in Tableau. Good luck with your project! 👍
+
+
+
+---------------------------------------------------------------
+Sure, here's how you can create calculated fields in Tableau to extract the hours, minutes, and seconds from your "Duration" column:
+
+1. Extract the hour component:
+
+```plaintext
+// Create a calculated field named "DurationHours"
+DATEPART('hour', [Duration])
+```
+
+2. Extract the minute component:
+
+```plaintext
+// Create a calculated field named "DurationMinutes"
+DATEPART('minute', [Duration])
+```
+
+3. Extract the second component:
+
+```plaintext
+// Create a calculated field named "DurationSeconds"
+DATEPART('second', [Duration])
+```
+
+In these codes, `DurationHours`, `DurationMinutes`, and `DurationSeconds` are the names of the calculated fields. You can replace these with any names you prefer. Remember to replace `[Duration]` with the actual name of your duration column if it's different.
+
+These calculated fields will allow you to perform calculations on the duration in Tableau. Good luck with your project! 👍

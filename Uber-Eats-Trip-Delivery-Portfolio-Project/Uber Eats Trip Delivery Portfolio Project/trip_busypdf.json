@@ -1,0 +1,416 @@
+{
+  "pdfDoc" : "trip.pdf",
+  "extractedBy" : "https://busypdf.com",
+  "pages" : [ {
+    "pageNo" : 1,
+    "trimBoxOriginX" : 0.0,
+    "trimBoxOriginY" : 0.0,
+    "trimBoxWidth" : 595.0,
+    "trimBoxHeight" : 842.0,
+    "txtRns" : [ {
+      "leftX" : 190.5452,
+      "bottomY" : 39.1186,
+      "rightX" : 351.8335,
+      "topY" : 31.1186,
+      "baseLineY" : 37.5025,
+      "fontId" : 1,
+      "text" : "Coco Ichibanya Curry House (San Diego) "
+    }, {
+      "leftX" : 190.5452,
+      "bottomY" : 53.5226,
+      "rightX" : 356.509,
+      "topY" : 45.5226,
+      "baseLineY" : 51.9066,
+      "fontId" : 1,
+      "text" : "Pacific Hwy, San Diego, CA 92101-1128, US"
+    }, {
+      "leftX" : 171.3398,
+      "bottomY" : 227.7732,
+      "rightX" : 236.8543,
+      "topY" : 218.7732,
+      "baseLineY" : 225.9551,
+      "fontId" : 2,
+      "text" : "Your Earnings "
+    }, {
+      "leftX" : 171.3398,
+      "bottomY" : 253.6038,
+      "rightX" : 242.8534,
+      "topY" : 232.6038,
+      "baseLineY" : 249.3616,
+      "fontId" : 3,
+      "text" : "$15.08 "
+    }, {
+      "leftX" : 244.2602,
+      "bottomY" : 284.1889,
+      "rightX" : 348.8762,
+      "topY" : 275.1889,
+      "baseLineY" : 282.3708,
+      "fontId" : 4,
+      "text" : "SEND THANKS FOR TIP"
+    }, {
+      "leftX" : 190.5452,
+      "bottomY" : 326.6047,
+      "rightX" : 386.8628,
+      "topY" : 315.6047,
+      "baseLineY" : 324.3826,
+      "fontId" : 5,
+      "text" : "The estimate for this trip, including an "
+    }, {
+      "leftX" : 190.5452,
+      "bottomY" : 343.4094,
+      "rightX" : 309.0944,
+      "topY" : 332.4094,
+      "baseLineY" : 341.1872,
+      "fontId" : 5,
+      "text" : "upfront tip, was $15.08."
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 376.6147,
+      "rightX" : 222.784,
+      "topY" : 367.6147,
+      "baseLineY" : 374.7966,
+      "fontId" : 2,
+      "text" : "Duration "
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 392.6231,
+      "rightX" : 250.6432,
+      "topY" : 381.6231,
+      "baseLineY" : 390.4009,
+      "fontId" : 5,
+      "text" : "33 min 21 sec "
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 405.4227,
+      "rightX" : 222.9583,
+      "topY" : 396.4227,
+      "baseLineY" : 403.6046,
+      "fontId" : 2,
+      "text" : "Distance "
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 421.4311,
+      "rightX" : 216.4164,
+      "topY" : 410.4311,
+      "baseLineY" : 419.209,
+      "fontId" : 5,
+      "text" : "12.6 mi"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 452.2358,
+      "rightX" : 240.7945,
+      "topY" : 443.2358,
+      "baseLineY" : 450.4177,
+      "fontId" : 6,
+      "text" : "Vehicle Type "
+    }, {
+      "leftX" : 377.1973,
+      "bottomY" : 466.6398,
+      "rightX" : 413.6733,
+      "topY" : 457.6398,
+      "baseLineY" : 464.8217,
+      "fontId" : 6,
+      "text" : "Delivery"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 496.048,
+      "rightX" : 256.5812,
+      "topY" : 487.048,
+      "baseLineY" : 494.2299,
+      "fontId" : 6,
+      "text" : "Time Requested "
+    }, {
+      "leftX" : 374.1964,
+      "bottomY" : 510.452,
+      "rightX" : 413.4846,
+      "topY" : 501.452,
+      "baseLineY" : 508.6339,
+      "fontId" : 6,
+      "text" : "11:23 AM"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 539.8602,
+      "rightX" : 255.0714,
+      "topY" : 530.8602,
+      "baseLineY" : 538.0421,
+      "fontId" : 6,
+      "text" : "Date Requested "
+    }, {
+      "leftX" : 318.981,
+      "bottomY" : 554.2642,
+      "rightX" : 412.2654,
+      "topY" : 545.2642,
+      "baseLineY" : 552.4461,
+      "fontId" : 6,
+      "text" : "Monday, July 3, 2023"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 583.6724,
+      "rightX" : 243.7785,
+      "topY" : 574.6724,
+      "baseLineY" : 581.8543,
+      "fontId" : 6,
+      "text" : "Points Earned"
+    }, {
+      "leftX" : 377.1973,
+      "bottomY" : 612.4805,
+      "rightX" : 413.4044,
+      "topY" : 603.4805,
+      "baseLineY" : 610.6624,
+      "fontId" : 6,
+      "text" : "3 points"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 641.8887,
+      "rightX" : 236.8766,
+      "topY" : 632.8887,
+      "baseLineY" : 640.0706,
+      "fontId" : 6,
+      "text" : "Tip Included"
+    }, {
+      "leftX" : 388.6004,
+      "bottomY" : 670.6967,
+      "rightX" : 413.5587,
+      "topY" : 661.6967,
+      "baseLineY" : 668.8786,
+      "fontId" : 6,
+      "text" : "$6.56"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 711.918,
+      "rightX" : 254.9059,
+      "topY" : 697.918,
+      "baseLineY" : 709.0898,
+      "fontId" : 7,
+      "text" : "Paid to you"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 738.5156,
+      "rightX" : 203.1996,
+      "topY" : 729.5156,
+      "baseLineY" : 736.6975,
+      "fontId" : 6,
+      "text" : "Fare "
+    }, {
+      "leftX" : 360.9927,
+      "bottomY" : 752.9197,
+      "rightX" : 385.2422,
+      "topY" : 743.9197,
+      "baseLineY" : 751.1016,
+      "fontId" : 6,
+      "text" : "$8.52"
+    }, {
+      "leftX" : 190.5452,
+      "bottomY" : 781.7277,
+      "rightX" : 214.3496,
+      "topY" : 772.7277,
+      "baseLineY" : 779.9096,
+      "fontId" : 6,
+      "text" : "Base "
+    }, {
+      "leftX" : 360.9927,
+      "bottomY" : 796.1317,
+      "rightX" : 385.2422,
+      "topY" : 787.1317,
+      "baseLineY" : 794.3136,
+      "fontId" : 6,
+      "text" : "$8.52"
+    } ],
+    "txtChars" : null
+  }, {
+    "pageNo" : 2,
+    "trimBoxOriginX" : 0.0,
+    "trimBoxOriginY" : 0.0,
+    "trimBoxWidth" : 595.0,
+    "trimBoxHeight" : 842.0,
+    "txtRns" : [ {
+      "leftX" : 180.9425,
+      "bottomY" : 40.5209,
+      "rightX" : 197.5118,
+      "topY" : 31.5209,
+      "baseLineY" : 38.7028,
+      "fontId" : 6,
+      "text" : "Tip "
+    }, {
+      "leftX" : 359.7924,
+      "bottomY" : 54.9249,
+      "rightX" : 384.7507,
+      "topY" : 45.9249,
+      "baseLineY" : 53.1068,
+      "fontId" : 6,
+      "text" : "$6.56"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 84.3331,
+      "rightX" : 246.0068,
+      "topY" : 75.3331,
+      "baseLineY" : 82.515,
+      "fontId" : 6,
+      "text" : "Your earnings "
+    }, {
+      "leftX" : 354.9911,
+      "bottomY" : 98.7371,
+      "rightX" : 384.7114,
+      "topY" : 89.7371,
+      "baseLineY" : 96.919,
+      "fontId" : 6,
+      "text" : "$15.08"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 134.7471,
+      "rightX" : 236.7583,
+      "topY" : 125.7471,
+      "baseLineY" : 132.929,
+      "fontId" : 6,
+      "text" : "More details"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 175.9684,
+      "rightX" : 316.4202,
+      "topY" : 161.9684,
+      "baseLineY" : 173.1403,
+      "fontId" : 7,
+      "text" : "Customer payments"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 202.566,
+      "rightX" : 252.9198,
+      "topY" : 193.566,
+      "baseLineY" : 200.7479,
+      "fontId" : 6,
+      "text" : "Customer price "
+    }, {
+      "leftX" : 356.7916,
+      "bottomY" : 216.9701,
+      "rightX" : 385.0529,
+      "topY" : 207.9701,
+      "baseLineY" : 215.152,
+      "fontId" : 6,
+      "text" : "$22.15"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 246.3783,
+      "rightX" : 197.5118,
+      "topY" : 237.3783,
+      "baseLineY" : 244.5602,
+      "fontId" : 6,
+      "text" : "Tip "
+    }, {
+      "leftX" : 359.7924,
+      "bottomY" : 260.7823,
+      "rightX" : 384.7507,
+      "topY" : 251.7823,
+      "baseLineY" : 258.9642,
+      "fontId" : 6,
+      "text" : "$6.56"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 290.1905,
+      "rightX" : 206.4639,
+      "topY" : 281.1905,
+      "baseLineY" : 288.3724,
+      "fontId" : 6,
+      "text" : "Total "
+    }, {
+      "leftX" : 356.1914,
+      "bottomY" : 304.5945,
+      "rightX" : 384.806,
+      "topY" : 295.5945,
+      "baseLineY" : 302.7764,
+      "fontId" : 6,
+      "text" : "$28.71"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 345.2156,
+      "rightX" : 262.4065,
+      "topY" : 331.2156,
+      "baseLineY" : 342.3875,
+      "fontId" : 7,
+      "text" : "Paid to Uber"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 371.8132,
+      "rightX" : 234.624,
+      "topY" : 362.8132,
+      "baseLineY" : 369.9951,
+      "fontId" : 6,
+      "text" : "Service Fee "
+    }, {
+      "leftX" : 355.5912,
+      "bottomY" : 386.2173,
+      "rightX" : 384.7233,
+      "topY" : 377.2173,
+      "baseLineY" : 384.3992,
+      "fontId" : 6,
+      "text" : "$13.63"
+    }, {
+      "leftX" : 180.9425,
+      "bottomY" : 415.6255,
+      "rightX" : 206.4639,
+      "topY" : 406.6255,
+      "baseLineY" : 413.8074,
+      "fontId" : 6,
+      "text" : "Total "
+    }, {
+      "leftX" : 355.5912,
+      "bottomY" : 430.0295,
+      "rightX" : 384.7233,
+      "topY" : 421.0295,
+      "baseLineY" : 428.2114,
+      "fontId" : 6,
+      "text" : "$13.63"
+    } ],
+    "txtChars" : null
+  } ],
+  "fontSpecs" : [ {
+    "id" : 1,
+    "fontFamily" : "UberMoveText-Medium",
+    "fontSize" : 8.0,
+    "italic" : false,
+    "bold" : false,
+    "color" : "#000000"
+  }, {
+    "id" : 2,
+    "fontFamily" : "UberMoveText-Medium",
+    "fontSize" : 9.0,
+    "italic" : false,
+    "bold" : false,
+    "color" : "#545454"
+  }, {
+    "id" : 3,
+    "fontFamily" : "UberMove-Bold",
+    "fontSize" : 21.0,
+    "italic" : false,
+    "bold" : true,
+    "color" : "#000000"
+  }, {
+    "id" : 4,
+    "fontFamily" : "UberMoveText-Medium",
+    "fontSize" : 9.0,
+    "italic" : false,
+    "bold" : false,
+    "color" : "#ffffff"
+  }, {
+    "id" : 5,
+    "fontFamily" : "UberMoveText-Medium",
+    "fontSize" : 11.0,
+    "italic" : false,
+    "bold" : false,
+    "color" : "#000000"
+  }, {
+    "id" : 6,
+    "fontFamily" : "UberMoveText-Medium",
+    "fontSize" : 9.0,
+    "italic" : false,
+    "bold" : false,
+    "color" : "#000000"
+  }, {
+    "id" : 7,
+    "fontFamily" : "UberMove-Bold",
+    "fontSize" : 14.0,
+    "italic" : false,
+    "bold" : true,
+    "color" : "#000000"
+  } ],
+  "notices" : "Text coordinates are specified with respect to the TrimBox of the page. You will need to adjust if you want raw pdf coordinates."
+}

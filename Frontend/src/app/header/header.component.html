@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/logo.png" alt="" width="100" height="80" />
+    </a>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/react" routerLinkActive="active">React</a></li>
+      <li><a routerLink="/chart" routerLinkActive="active">Chart</a></li>
+      <li>
+        <a
+          *ngIf="securityObject!.canAccessTravelDetails"
+          routerLink="/traveldetails"
+          routerLinkActive="active"
+          >Travel Details</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="!securityObject!.isAuthenticated"
+          routerLink="/login"
+          routerLinkActive="active"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a *ngIf="securityObject!.isAuthenticated" href="#" (click)="logout()">
+          Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

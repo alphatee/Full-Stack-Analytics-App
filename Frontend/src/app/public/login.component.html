@@ -1,0 +1,48 @@
+<!-- Enter below files so -->
+<!--
+<info-message></info-message>
+<exception-message></exception-message>
+<validation-message></validation-message>
+-->
+
+<header></header>
+<!-- TEMPORARY CODE TO VIEW SECURITY OBJECT -->
+<!-- below script helps with testing -->
+<!--
+<div class="row">
+    <div class="col">
+        <label>{{securityObject | json}}</label>
+    </div>
+</div>
+-->
+<div class="container d-flex justify-content-center align-items-center position">
+    <form class="w-100">
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <div class=" card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Log in</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="userName">User Name</label>
+                            <input id="userName" name="userName" class="form-control" required
+                                [(ngModel)]="user.userName" autofocus="autofocus" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" name="password" class="form-control" required
+                                [(ngModel)]="user.password" type="password" />
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-warning" (click)="login()">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<footer></footer>

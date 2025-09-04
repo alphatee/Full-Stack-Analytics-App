@@ -1,0 +1,8 @@
+.position {
+    min-height: 100vh;
+}
+
+.cdk-global-overlay-wrapper {
+  /* For vertical centering */
+  align-items: center;
+}

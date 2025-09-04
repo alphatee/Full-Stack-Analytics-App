@@ -1,0 +1,5 @@
+Channel: The Learn Mighty
+9/17 : https://www.youtube.com/watch?v=VCvs4qxm-EU&list=PLYv_YBuDT5bVzw9PZjwy994K0NTymOLeu&index=9
+
+By the end of this tutorial, this source is good for me to implement in my wiki.
+Just the parts of the tutorial that I integrated for my project.

@@ -1,0 +1,22 @@
+﻿Step 1:
+I am following along the course again and integrating my current project, into this new project.          
+
+Step 2: 
+Follow this tutorial from docs: "https://learn.microsoft.com/en-us/aspnet/core/tutorials/min-web-api?view=aspnetcore-8.0&tabs=visual-studio" titled : "Tutorial: Create a minimal API with ASP.NET Core"
+
+DO Today: 
+	1. Get a start on creating a WIKI
+Demo: Supporting Versioning 
+https://app.pluralsight.com/ilx/video-courses/a18c29bd-8b02-4643-b2a1-15aebdc571f1/ead9cff7-1cb8-4d3b-af31-8db235a0cdbd/622b1f9e-129e-49f3-9630-ea61d15128cd
+YOU NEED TO DOCUMENT THIS IMMEDIATELY ON AZURE!
+
+note to figure out: ....trip? make it make sense, what to do with that field for authentication. is it necessary.....why does he attach antwerp to one of his CityDto in his database?
+
+Before meeting with Vi, and or on wed,
+=take notes on all the information in Module 8, many videos explain what happens before a demo
+
+CSV Viewer: 
+https://www.convertcsv.com/csv-viewer-editor.htm
+
+
+

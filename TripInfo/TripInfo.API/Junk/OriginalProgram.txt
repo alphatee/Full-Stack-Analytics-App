@@ -1,0 +1,190 @@
+﻿using Microsoft.AspNetCore.StaticFiles; // FileExtensionContentTypeProvider 
+using Microsoft.EntityFrameworkCore; // UseSqlServer() 
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens; // SymmetricSecurityKey 
+using Microsoft.OpenApi.Models; // OpenApiSecurityScheme, SecuritySchemeType, OpenApiSecurityRequirement, OpenApiReference, ReferenceType
+using Serilog; // Log,LoggerConfiguration
+using System.Reflection; // Assembly
+using System.Text; // Encoding
+using TripInfo.API; // TripsDataStore.cs
+using TripInfo.API.DbContexts; // TripInfoContext
+using TripInfo.API.Entities; 
+using TripInfo.API.Services; // IMailService, LocalMailService, CloudMailService, TripsDataStore, TripInfoRepository
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("log/tripinfo.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog(); // Use Serilog instead of the default logging providers
+
+// Add services to the container.
+
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable = true;
+}).AddNewtonsoftJson() // Add JSON support for the API, adding I/O Formatters using Json.NET
+  .AddXmlDataContractSerializerFormatters(); // Add XML support for the API, adding I/O Formatters
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(setupAction =>
+{
+    var xmlCommentsFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"; // TripInfo.API and adds extension .xml
+    var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile); // go to properties and above events to see approved xml documentation checked. 
+
+    setupAction.IncludeXmlComments(xmlCommentsFullPath);
+
+    setupAction.AddSecurityDefinition("TripInfoApiBearerAuth", new OpenApiSecurityScheme()
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        Description = "Input your token to access this API"
+    });
+
+    setupAction.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "TripInfoApiBearerAuth"
+                }
+            },
+            new List<string>()
+        }
+    });
+});
+builder.Services.AddSingleton<FileExtensionContentTypeProvider>(); //Registered service as a singleton
+
+#if DEBUG
+builder.Services.AddTransient<IMailService, LocalMailService>();
+#else 
+builder.Services.AddTransient<IMailService, CloudMailService>();
+#endif
+
+builder.Services.AddSingleton<TripsDataStore>();
+
+builder.Services.AddDbContext<TripInfoContext>(options =>
+        options.UseSqlServer(builder.Configuration
+        .GetConnectionString("TripInfoConnectionString")));
+
+builder.Services.AddScoped<ITripInfoRepository, TripInfoRepository>(); // pass the contract and the implementation
+
+builder.Services.AddScoped<ITripInfoService, TripInfoService>(); // pass the contract and the implementation (i.e.,  correctly register)
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // the TripInfo.API assembly(current), will be scanned for profiles
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Authentication:Issuer"],
+            ValidAudience = builder.Configuration["Authentication:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Authentication:SecretForKey"]))
+        };
+    }
+);
+
+builder.Services.AddApiVersioning(setupAction =>
+{
+    setupAction.AssumeDefaultVersionWhenUnspecified = true; // we do not need to pass through an explicit request version to get back data.
+    setupAction.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0); // if no version is specified, the default version will be used.
+    setupAction.ReportApiVersions = true; // the response will include the supported versions
+});
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Replace with the actual origin of your Angular app
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseCors(MyAllowSpecificOrigins);
+
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+app.Run();
+
+/*
+// Must integrate this function somehow to proceed.
+// Go to a new branch to refactor Program.cs and Startup.cs to scale this application.
+public JwtSettings GetJwtSettings()
+{
+    JwtSettings settings = new JwtSettings();
+
+    settings.Key = Configuration["JwtToken:key"];
+    settings.Audience = Configuration["JwtToken:audience"];
+    settings.Issuer = Configuration["JwtToken:issuer"];
+    settings.MinutesToExpiration = 
+        Convert.ToInt32(
+            Configuration["JwtToken:minutestoexpiration"]);
+
+    return settings;
+}
+
+
+public void ConfigureJwt(IServiceCollection services)
+{
+    // Get JWT Token Settings from appsettings.json file 
+    JwtSettings settings = GetJwtSettings(); 
+    services.AddSingleton<JwtSettings>(settings);
+    services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = "JwtBearer";
+        options.DefaultChallengeScheme = "JwtBearer";
+
+    })
+        .AddJwtBearer("JwtBearer", jwtBearerOptions =>
+        {
+            jwtBearerOptions.TokenValidationParameters =
+            new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(settings.Key)),
+                ValidateIssuer = true,
+                ValidIssuer = settings.Issuer,
+
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.FromMinutes(
+                        settings.MinutesToExpiration)
+            };
+        });
+}
+*/

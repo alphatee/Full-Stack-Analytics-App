@@ -1,0 +1,18 @@
+.chart-grid
+{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}

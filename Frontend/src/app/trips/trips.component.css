@@ -1,0 +1,18 @@
+.pretty-json {
+    text-align: left;
+    /* Align text to the left */
+    background-color: #f8f9fa;
+    /* Light background color */
+    padding: 10px;
+    /* Padding around the text */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-family: monospace;
+    /* Monospace font for better readability */
+    white-space: pre-wrap;
+    /* Preserve whitespace and wrap lines */
+    overflow-x: auto;
+    /* Enable horizontal scrolling if needed */
+    color: green;
+    /* JSON text is green */
+}

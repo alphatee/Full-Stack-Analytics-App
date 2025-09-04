@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TripInfo.API</name>
+    </assembly>
+    <members>
+        <member name="T:TripInfo.API.Controllers.TripsController">
+            <summary>
+            Configures this controller with features and behaviors aiming to improve the development experience when building APIs
+            </summary>
+        </member>
+        <member name="M:TripInfo.API.Controllers.TripsController.GetTrips(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns a collection of trips.
+            </summary>
+            <param name="name">The store name of the trip to return.</param>
+            <remarks>An empty collection is a valid response body. </remarks>
+            <returns>An ActionResult object</returns>
+        </member>
+        <member name="M:TripInfo.API.Controllers.TripsController.GetTrip(System.Int32,System.Boolean)">
+            <summary>
+            Returns a specific trip based on the provided id.
+            </summary>
+            <param name="id">The id of the trip to return.</param>
+            <param name="includeCustomers">Whether or not to include customers in the response.</param>
+            <returns>An IActionResult object.</returns>
+            <response code="200">Returns the requested trip.</response>
+        </member>
+        <member name="T:TripInfo.API.Migrations.InitialMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.InitialMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.InitialMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.InitialMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.TripInfoDBAddCustomerDescription">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.TripInfoDBAddCustomerDescription.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.TripInfoDBAddCustomerDescription.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.TripInfoDBAddCustomerDescription.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.DataSeed">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.DataSeed.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.DataSeed.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.DataSeed.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.FixedCustomerDescriptiontoCustomer1forId2">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.FixedCustomerDescriptiontoCustomer1forId2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.FixedCustomerDescriptiontoCustomer1forId2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.FixedCustomerDescriptiontoCustomer1forId2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.NewEntityModels">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.NewEntityModels.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.NewEntityModels.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.NewEntityModels.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.SeedMetaDataEntity">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SeedMetaDataEntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SeedMetaDataEntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SeedMetaDataEntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.SecuritySchema">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SecuritySchema.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SecuritySchema.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.SecuritySchema.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:TripInfo.API.Migrations.InitialImport">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.InitialImport.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TripInfo.API.Migrations.InitialImport.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="P:TripInfo.API.Models.TripDto.Id">
+            <summary>
+            Gets or sets the trip identifier.
+            </summary>
+        </member>
+        <member name="P:TripInfo.API.Models.TripDto.StoreName">
+            <summary>
+            Gets or sets the store name.
+            </summary>
+        </member>
+        <member name="P:TripInfo.API.Models.TripDto.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+        </member>
+        <member name="T:TripInfo.API.Models.TripWithoutCustomersDto">
+            <summary>
+            A DTO (Data Transfer Object) for the Trip model without customers
+            </summary>
+        </member>
+    </members>
+</doc>

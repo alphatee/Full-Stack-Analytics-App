@@ -1,0 +1,12 @@
+﻿This code is ready to ship out. 
+
+The branch is called "feature_iTextSharp_bugFixes" 
+Using ITextSharp (commericial license required if used as a service)
+
+Going forward for my API project, this branch will be used. 
+
+Therefore, this branch will now be my new master branch. 
+
+-------------------------------------------------------------
+12-16-2023 Is the day I begin creating an API 
+-------------------------------------------------------------

@@ -1,0 +1,3 @@
+Read yanky_cranky (https://stackoverflow.com/questions/56497414/angular-proxy-conf-json-not-working-against-multiple-apis)
+answer and the link (https://betterprogramming.pub/setup-a-proxy-for-api-calls-for-your-angular-cli-app-6566c02a8c4d) he provided.
+
